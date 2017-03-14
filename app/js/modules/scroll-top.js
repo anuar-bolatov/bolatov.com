@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('.scroll-top').on('click', function(event) {
 	  event.preventDefault();
 	  var target = $(this).data('scrollTo');
@@ -6,4 +7,5 @@ $(document).ready(function(){
 	    scrollTop: $(target).offset().top
 	  }, 650);
 	});
+	
 });
