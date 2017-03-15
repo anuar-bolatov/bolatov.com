@@ -1,0 +1,52 @@
+.menu-toggle {
+  	position: relative;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	transition: transform 0.5s cubic-bezier(1,.01,.58,.59);
+}
+
+.menu-toggle span {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 0.2rem;
+	margin-top: -0.1rem;
+	background-color: red;
+	user-select: none;
+}
+
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: red;
+	content: '';
+	transition: transform 0.3s ease-in;
+}
+
+.menu-toggle span:before {
+	transform: translateY(-0.5rem);
+}
+
+.menu-toggle span:after {
+	transform: translateY(0.5rem);
+}
+
+.menu-toggle.menu-toggle-open span:before {
+	transform: translateY(-0.35rem) translateX(0.65rem) rotate(45deg) scaleX(0.6);
+}
+
+.menu-toggle.menu-toggle-open span:after {
+	transform: translateY(0.35rem) translateX(0.65rem) rotate(-45deg) scaleX(0.6);
+}
+
+.menu-toggle-rotate {
+    transform: rotate(270deg);
+}

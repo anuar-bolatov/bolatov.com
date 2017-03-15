@@ -121,29 +121,6 @@ body {
   }
 } /* END FOOTER */
 
-
-
-
-/* NAVBAR */
-nav {
-  background: #42A5F5;
-  /* Navbar animation styles */
-  animation-name: dropNav;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-duration: 0.6s;
-
-  @keyframes dropNav {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-}/* END NAVBAR */
-
-
 /* SCROLL BASED ANIMATION EFFECTS */
 .animation-element {
   opacity: 0;
