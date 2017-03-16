@@ -15,7 +15,7 @@
 	width: 100%;
 	height: 0.2rem;
 	margin-top: -0.1rem;
-	background-color: red;
+	background-color: $font-color;
 	user-select: none;
 }
 
@@ -26,7 +26,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: red;
+	background: $font-color;
 	content: '';
 	transition: transform 0.3s ease-in;
 }

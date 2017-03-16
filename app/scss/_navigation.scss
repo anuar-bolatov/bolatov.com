@@ -1,8 +1,18 @@
 /* NAVBAR */
 
 .navbar {
+  position: fixed;
+  z-index: 999;
   overflow: hidden;
-  background-color: #333;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: $white;
+  transition: height 0.3s cubic-bezier(.09,.74,.67,.84);
 
   /* Navbar animation styles */
   animation-name: dropNav;
@@ -18,64 +28,121 @@
       transform: translateY(0);
     }
   }
-  
+
   /* Hamburger menu icon visibility */
   .menu-toggle {
+    float: right;
     display: none;
 
     @media screen and (max-width: 34em) {
       display: block;
-
+      margin-top: 16px;
     }
   }
 
   .logo {
     float: left;
+    color: $font-color;
+    text-decoration: none;
+    margin-top: 18px;
+    font-family: "effra";
   }
 
   .active {
-    background-color: orange;
+    background-color: $secondary-color;
   }
 
-  a {
+  .navbar-item {
     float: right;
     display: block;
-    color: #f2f2f2;
+    color: $font-color;
     text-decoration: none;
     text-align: center;
-    padding: 14px 16px; 
+    padding: 20px 16px;
+    transition: color 0.3s ease-in;
 
     &:hover:not(.active) {
-      color: red;
+      color: $secondary-color;
     }
 
     @media screen and (max-width: 34em) {
-      &:not(:first-child, :last-child) {
-        display: none;
-      }
+      display: none;
     }
   }
+
 }/* END NAVBAR */
 
-
 .responsive {
-  position: relative;
-  padding-top: 30px; 
+  height: 320px;
+  position: fixed;
+  
+  padding-top: 60px;
+  transition: height 0.5s cubic-bezier(.9,.03,.32,.83);
 
   .logo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 15px;
   }
 
-  & a {
+  .navbar-item {
     float: none;
-    display: block !important;
+    display: block!important;
+  }
 
-    &.menu-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+  .menu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 0;
+  }
+}
+
+
+/* Media Navbar */
+@media (min-width: 1200px) {
+  .navbar {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1140px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 540px;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }

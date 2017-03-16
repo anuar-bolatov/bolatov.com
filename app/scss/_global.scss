@@ -1,12 +1,10 @@
-/* Imports */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
-
 /* Varibles */
-$main-font: 'Roboto',sans-serif;
-$primary-color: #57e2b2;
+$primary-color: #2a4b8d;
+$secondary-color: #ff9933;
+$white: #ffffff;
 $light-gray: #f8f7f5;
-$font-color: #2e3c40;
-$font-normal: 300;
+$font-color: #0C1C2C;
+$font-normal: 400;
 $font-bold: 700;
 
 /* Small */
@@ -46,10 +44,10 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: 1.625rem;
   font-weight: $font-normal;
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
+  font-family: "effra", sans-serif;
   margin: 0;
   padding: 0;
   color: $font-color;
@@ -60,8 +58,14 @@ body {
   z-index: 10;
 }
 
-
-
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-color;
+  height: 400px;
+}
 
 /* FOOTER */
 .footer_spacer {
@@ -79,8 +83,8 @@ body {
   z-index: 0;
   height: 300px;
   padding: 20px;
-  background: #42A5F5;
-  color: white;
+  background: $primary-color;
+  color: $white;
 
   .footer_content {
     position: fixed;
