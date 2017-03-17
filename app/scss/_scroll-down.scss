@@ -1,24 +1,21 @@
 .scroll-down {
   display: block;
-  margin: 0 auto;
+  opacity: 0.5;
   width: 28px;
-  height: 46px;
+  height: 40px;
   border-radius: 14px;
-  border: 2px solid $primary-color;
-  position: absolute;
-  bottom: 40px;
-  position: absolute;
-  left: 50%;
-  margin-left: -28px;
+  border: 2px solid $white;
+  margin: 0 auto;
+  @include sm {margin: 0;} 
 }
 
 .scroll-down span {
   display: block;
-  margin: 6px auto;
+  margin: 4px auto;
   width: 3px;
   height: 3px;
   border-radius: 6px;
-  background: $primary-color;
+  background: $white;
   animation-duration: 1.5s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;

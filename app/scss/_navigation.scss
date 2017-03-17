@@ -1,19 +1,15 @@
 /* NAVBAR */
-
-.navbar {
+.masthead {
   position: fixed;
   z-index: 999;
-  overflow: hidden;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 64px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   background-color: $white;
-  transition: height 0.3s cubic-bezier(.09,.74,.67,.84);
-
+  box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+  height: 64px;
+  text-transform: lowercase;
+  
   /* Navbar animation styles */
   animation-name: dropNav;
   animation-iteration-count: 1;
@@ -28,9 +24,16 @@
       transform: translateY(0);
     }
   }
+}
+
+.navbar {
+  /* Social icons */
+  .navbar-social {
+    display: none;
+  }
 
   /* Hamburger menu icon visibility */
-  .menu-toggle {
+  .navbar-toggle {
     float: right;
     display: none;
 
@@ -44,8 +47,7 @@
     float: left;
     color: $font-color;
     text-decoration: none;
-    margin-top: 18px;
-    font-family: "effra";
+    margin-top: 16px;
   }
 
   .active {
@@ -54,15 +56,35 @@
 
   .navbar-item {
     float: right;
-    display: block;
-    color: $font-color;
-    text-decoration: none;
     text-align: center;
-    padding: 20px 16px;
-    transition: color 0.3s ease-in;
+    margin-top: 16px;
 
-    &:hover:not(.active) {
-      color: $secondary-color;
+    a {
+      text-decoration: none;
+      position: relative;
+      color: $font-color;
+      transition: color 0.3s ease-in;
+      margin-right: 20px;
+      &:last-child {margin-right: 0;}
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: $primary-color url('../img/hero-bg.jpg');
+        width: 100%;
+        transform: scaleX(0);
+        left: 0;
+        bottom: -4px;
+        height: 2px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      &:hover {
+        color: $primary-color;
+        &:before {
+          transform: scaleX(1);
+        }
+      }
     }
 
     @media screen and (max-width: 34em) {
@@ -72,12 +94,16 @@
 
 }/* END NAVBAR */
 
+
 .responsive {
-  height: 320px;
   position: fixed;
-  
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
   padding-top: 60px;
-  transition: height 0.5s cubic-bezier(.9,.03,.32,.83);
+  background-color: $white;
+  height: 100%;
 
   .logo {
     position: absolute;
@@ -85,64 +111,32 @@
     left: 15px;
   }
 
-  .navbar-item {
-    float: none;
-    display: block!important;
-  }
-
-  .menu-toggle {
+  .navbar-toggle {
     position: absolute;
     right: 15px;
     top: 0;
   }
-}
 
-
-/* Media Navbar */
-@media (min-width: 1200px) {
-  .navbar {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1140px;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  .navbar-item {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10% 0;
+    a {
+      margin: 18px 0;
+    }
   }
-}
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .navbar {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .navbar {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 720px;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767px) {
-  .navbar {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 540px;
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  .navbar-social {
+    display: block;
+    text-align: center;
+    padding-top: 20%;
+    svg {
+      margin: 0 10px;
+      max-width: 40px;
+      fill: $font-color;
+      &:hover {fill: $primary-color;}
+    }
   }
 }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('.scroll-top').on('click', function(event) {
+	$('.smooth-scroll').on('click', function(event) {
 	  event.preventDefault();
 	  var target = $(this).data('scrollTo');
 	  $('html, body').animate({

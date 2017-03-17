@@ -41,30 +41,85 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100% !important;
   margin: 0;
   padding: 0;
-  font-size: 1.625rem;
-  font-weight: $font-normal;
-  line-height: 1.5;
-  font-family: "effra", sans-serif;
-  margin: 0;
-  padding: 0;
-  color: $font-color;
+  font-size: 1.2rem !important;
+  font-weight: $font-normal !important;
+  line-height: 1.5 !important;
+  font-family: "effra", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: $font-color !important;
+  letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin-top: 0!important;
+}
+
+.btn {
+  cursor: pointer;
+  background: $primary-color;
+  display: inline-block;
+  position: relative;
+  padding: 8px 18px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 1rem;
+  color: $white;
+  border: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 3px $secondary-color;
+    background: transparent;
+  }
 }
 
 .main {
   position: relative;
   z-index: 10;
+  background: $white;
 }
 
 .hero {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $primary-color;
-  height: 400px;
+  background: $primary-color url('../img/hero-bg.jpg');
+  background-color: $primary-color;
+  background-size: cover;
+  color: $white;
+  height: 90vh;
+
+  .hero-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-shadow: 0 0 50px 5px rgba(0,0,0,.6);
+    background-color: $font-color;
+    margin-top: 64px;
+    h2 {font-weight: $font-normal;}
+    p {color: $light-gray;}
+    button {margin-bottom: 2rem;}
+
+    //@include sm {margin-top: 0;}
+
+    @include md {
+      flex: 0 0 66.66666%;
+      max-width: 66.66666%;
+    }
+
+    @include xl {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .hero-text {
+      padding: 2rem;
+      @include md {
+        padding: 4rem;
+      }
+    }
+  }
 }
 
 /* FOOTER */
@@ -136,7 +191,7 @@ body {
   opacity: 0;
   transition: all 500ms linear;
   transform: translate3d(-100px, 0px, 0px);
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
 }
 
 .in-view {
