@@ -1,6 +1,6 @@
 /* Varibles */
 $primary-color: #2a4b8d;
-$secondary-color: #ff9933;
+$secondary-color: #40b2a4;
 $white: #ffffff;
 $light-gray: #f8f7f5;
 $font-color: #0C1C2C;
@@ -58,20 +58,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   cursor: pointer;
-  background: $primary-color;
-  display: inline-block;
-  position: relative;
-  padding: 8px 18px;
-  font-size: 16px;
-  line-height: 1.8;
-  margin-top: 1rem;
+  background-color: $primary-color;
   color: $white;
   border: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center; 
+  position: relative;
+  padding: 8px 18px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-top: 1rem;
+  
+  
   transition: all 0.3s ease-in;
 
   &:hover {
     box-shadow: inset 0px 0px 0px 3px $secondary-color;
     background: transparent;
+    text-decoration: none;
+    color: $white;
   }
 }
 
@@ -122,6 +129,78 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.about {  
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.about-portrait {
+  flex: 1 100%;
+  background: $primary-color url('../img/about-img.jpg');
+  background-size: cover;
+  background-position: 0% 0%;
+  width: 100%;
+  min-height: 280px;
+  @include sm {
+    background-position: 50% 50%;
+    flex: 1 33.333%;
+    width: 33.333%;
+  }
+  @include md {
+    background-position: 50% 0%;
+    flex: 1 50%;
+    width: 50%;
+  }
+}
+
+.about-content {
+  background-color: $font-color;
+  flex: 1 100%;
+  width: 100%;
+  color: $white;
+  padding: 2rem 1rem;
+  @include sm {
+    flex: 1 66.666%;
+    width: 66.666%;
+    padding: 4rem 2rem;
+  }
+  @include md {
+    flex: 1 50%;
+    width: 50%;
+    padding: 8rem 4rem;
+  }
+
+  q:before {
+    display: none;
+  }
+
+  /* Testimonial text */
+  .quote {
+    font-size: 2rem;
+  }
+
+  /* Name of author */
+  .author {
+    position: relative;
+    float: right;
+    color: $secondary-color;
+    letter-spacing: normal;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: -34px;
+      display: block;
+      background-color: $secondary-color;
+      height: 2px;
+      width: 24px;
+    }
+  }
+}
+
 /* FOOTER */
 .footer_spacer {
   position: relative;
@@ -138,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0;
   height: 300px;
   padding: 20px;
-  background: $primary-color;
+  background: $secondary-color;
   color: $white;
 
   .footer_content {
