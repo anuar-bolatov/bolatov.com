@@ -7,3 +7,4 @@
 //= modules/smooth-scroll.js
 //= modules/scroll-based-animation.js
 //= modules/carousel.js
+//= modules/copyright.js
