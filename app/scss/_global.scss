@@ -2,7 +2,7 @@
 $primary-color: #2a4b8d;
 $secondary-color: #40b2a4;
 $white: #ffffff;
-$light-gray: #f8f7f5;
+$light-gray: #e6e8e3;
 $font-color: #0C1C2C;
 $font-normal: 400;
 $font-bold: 700;
@@ -54,6 +54,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   margin-top: 0!important;
+  color: $white;
 }
 
 .btn {
@@ -95,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   background: $primary-color url('../img/hero-bg.jpg');
   background-color: $primary-color;
   background-size: cover;
-  color: $white;
+  color: $light-gray;
   height: 90vh;
 
   .hero-content {
@@ -104,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 50px 5px rgba(0,0,0,.6);
     background-color: $font-color;
     margin-top: 64px;
-    h2 {font-weight: $font-normal;}
+    h2 {font-weight: $font-normal;color: $light-gray;}
     p {color: $light-gray;}
     button {margin-bottom: 2rem;}
 
@@ -150,9 +151,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 33.333%;
   }
   @include md {
-    background-position: 50% 0%;
+    background-position: 0% 0%;
     flex: 1 50%;
     width: 50%;
+  }
+  @include xl {
+    flex: 1 60%;
+    width: 60%;
   }
 }
 
@@ -165,21 +170,35 @@ h1, h2, h3, h4, h5, h6 {
   @include sm {
     flex: 1 66.666%;
     width: 66.666%;
-    padding: 4rem 2rem;
+    padding: 2rem;
   }
   @include md {
     flex: 1 50%;
     width: 50%;
-    padding: 8rem 4rem;
+    padding: 4rem;
+  }
+
+  @include xl {
+    flex: 1 40%;
+    width: 40%;
+  }
+
+  /* Testimonial text */
+  .quote {
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+    @include md {
+      font-size: 2rem; 
+    }
   }
 
   q:before {
     display: none;
   }
 
-  /* Testimonial text */
-  .quote {
-    font-size: 2rem;
+  /* Text */
+  .about-text {
+    p{color: $light-gray;}
   }
 
   /* Name of author */
@@ -191,14 +210,73 @@ h1, h2, h3, h4, h5, h6 {
     &:before {
       content: '';
       position: absolute;
-      top: 12px;
-      left: -34px;
+      top: 14px;
+      left: -30px;
       display: block;
       background-color: $secondary-color;
       height: 2px;
-      width: 24px;
+      width: 20px;
     }
   }
+
+  .about-slider::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  .kiss-slider {
+    margin-bottom: 0;
+    & li {
+      list-style: none;
+    }
+  }
+  
+  .kiss-pagination {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .active {
+      opacity: 1;
+    }
+
+    button {
+      display: inline-block;
+      border-radius: 50%;
+      background: white;
+      border: none;
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      opacity: 0.5;
+      transition: opacity 0.6s ease;
+      margin-right: 10px;
+      &:last-child {margin-right: 0;}
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.quote-icon {
+  width: 48px;
+  margin-bottom: 2rem;
+  transform: rotate(30deg);
+  transform-origin: bottom right;
+  transition: all 0.5s cubic-bezier(1,.02,.37,.93) 0.625s;
+}
+
+.in-view-rotate {
+  transform: rotate(0deg);
+}
+
+
+.font-normal {
+  font-weight: $font-normal;
 }
 
 /* FOOTER */
