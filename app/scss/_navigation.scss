@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   background-color: $white;
-  box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 2px 0px rgba(0,0,0,0.2);
   height: 64px;
   text-transform: lowercase;
   
@@ -58,14 +58,14 @@
     a {
       text-decoration: none;
       position: relative;
-      color: $font-color;
+      color: $secondary-color;
       margin-right: 20px;
       &:last-child {margin-right: 0;}
 
       &:before {
         content: "";
         position: absolute;
-        background: $primary-color url('../img/hero-bg.jpg');
+        background: $tertiary-color;
         width: 100%;
         transform: scaleX(0);
         left: 0;
@@ -73,6 +73,7 @@
         height: 2px;
         transition: all 0.2s ease-in;
       }
+      
       &:hover {
         &:before {transform: scaleX(1);}
       }
@@ -126,7 +127,7 @@
       margin: 0 10px;
       max-width: 40px;
       fill: $font-color;
-      &:hover {fill: $primary-color;}
+      &:hover {fill: $secondary-color;}
     }
   }
 }

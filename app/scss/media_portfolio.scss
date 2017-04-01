@@ -1,0 +1,29 @@
+// Extra small devices
+@media (max-width: 575px) {
+  #portfolio-grid div:nth-child(odd) {
+    background-color: $secondary-color;
+  }
+}
+// Small devices
+@media (min-width: 576px) and (max-width: 767px) {
+  #portfolio-grid div:nth-child(2), 
+  #portfolio-grid div:nth-child(3),
+  #portfolio-grid div:nth-child(6),
+  #portfolio-grid div:nth-child(7) {
+    background-color: $secondary-color;
+  }
+}
+// Medium devices
+@media (min-width: 768px) and (max-width: 991px) {
+  #portfolio-grid div:nth-child(-2n+3),
+  #portfolio-grid div:nth-child(3) ~ div:nth-child(-2n+7) {
+    background-color: $secondary-color;
+  }
+}
+// Large devices
+@media (min-width: 992px) {
+  #portfolio-grid div:nth-child(-2n+4), 
+  #portfolio-grid div:nth-child(4) ~ div:nth-child(-2n+7) {
+     background-color: $secondary-color;
+  }
+}

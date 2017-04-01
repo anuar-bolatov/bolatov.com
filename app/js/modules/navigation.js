@@ -7,5 +7,4 @@ function openNav() {
         x.className = "navbar";
         document.body.style.overflowY = "visible";
     }
-
 }

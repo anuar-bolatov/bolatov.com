@@ -40,7 +40,8 @@ var config = {
     server: {
         baseDir: "./dist"
     },
-    tunnel: false,
+    tunnel: true,
+    tunnel: "bolatov",
     host: 'localhost'
 };
 
