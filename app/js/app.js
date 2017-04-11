@@ -1,7 +1,3 @@
-/*
- * Smooth scrolling to the top of the page
- */
-
 //= modules/navigation.js
 //= modules/menu-toggle.js
 //= modules/smooth-scroll.js

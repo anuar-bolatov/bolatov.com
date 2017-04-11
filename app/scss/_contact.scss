@@ -1,0 +1,131 @@
+.contact_page {
+ background: #cdcdcd url('../img/contact-bg.jpg');
+ margin-top: 64px;
+}
+
+.contact_page-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  @include md {
+    padding: 2rem 0;
+  }
+}
+
+.contact-text {
+  flex: 1 100%;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  background-color: $primary-color;
+  padding: 2rem;
+  border: 10px solid $white;
+
+  .about-social svg {
+    margin-top: 2rem;
+    fill: $white;
+    &:hover {fill: $tertiary-color;}
+  }
+  
+  h2 {margin-bottom: 2rem;}
+
+  .contact-link {
+    color: $white;
+    position: relative;
+    font-weight: $font-bold;
+    margin: 0 6px;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: $tertiary-color;
+      width: 100%;
+      transform: scaleX(1);
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      &:before {transform: scaleX(0);}
+    }
+  }
+
+  .lets_talk {
+    width: 220px;
+    margin: 1rem 0 2rem 0;
+  }
+
+  @include md {
+    flex: 1 49%;
+    width: 49%;
+    margin-right: 1%;
+    min-height: 660px;
+    align-self: center;
+  }
+}
+
+.contact-form {
+  flex: 1 100%;
+  width: 100%;
+  padding: 2rem;
+  background-color: $white;
+  
+  @include md {
+    flex: 1 49%;
+    width: 49%;
+    margin-left: 1%;
+    min-height: 660px;
+  }
+}
+
+#myform {
+  
+  ol {padding: 0;}
+
+  li {
+    list-style: none;
+  }
+
+  legend {
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+    font-weight: $font-bold;
+    color: $secondary-color;
+  }
+
+  label {
+    margin-top: 1.275rem;
+  }
+
+  input {
+    width: 100%;
+    border: 2px solid #d9d9d9;
+    padding: 10px 12px;
+    font-size: 18px;
+    font-family: "effra";
+    color: #d9d9d9;
+  }
+
+  textarea {
+    width: 100%;
+    border: 2px solid #d9d9d9;
+    padding: 10px 12px;
+    font-size: 18px;
+    font-family: "effra";
+    color: #d9d9d9;
+  }
+
+  .myform_btn {
+    text-align: center;
+  }
+}

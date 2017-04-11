@@ -1,0 +1,32 @@
+.cta {
+  background: $white;
+  text-align: center;
+  padding: 2rem;
+
+  @include md {padding: 4rem;}
+
+  svg {
+    margin-bottom: 1rem;
+    max-width: 400px;
+    @include md { margin-bottom: 0;}
+  }
+
+  h1 {
+    color: $secondary-color;
+  }
+
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    p {
+      margin-bottom: 2rem;
+    }
+    .btn {
+      max-width: 148px;
+      margin: 0 auto;
+    }
+  }  
+}

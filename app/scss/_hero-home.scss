@@ -1,0 +1,38 @@
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: $white url('../img/hero-bg.jpg');
+  background-position: 50% 50%; 
+  background-size: cover;
+  height: 100vh;
+  color: $white;
+
+  .hero-content {
+    margin-top: 2rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: $primary-color;
+    h2 {font-weight: $font-normal;}
+    button {margin-bottom: 2rem;}
+
+    @include md {
+      flex: 0 0 66.66666%;
+      max-width: 66.66666%;
+    }
+
+    @include xl {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  .hero-text {
+    padding: 2rem;
+    @include md {
+      padding: 4rem;
+    }
+  }
+}/* END HERO */
