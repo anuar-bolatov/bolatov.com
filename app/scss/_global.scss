@@ -8,6 +8,28 @@ $font-color: #3b3d40;
 $font-normal: 400;
 $font-bold: 700;
 
+.text-center {
+  text-align: center;
+}
+
+.parsley-success {
+  color: #3c763d;
+  background-color: #dff0d8 !important; 
+  border-color: #d6e9c6;
+}
+
+.parsley-error {
+  color: #a94442;
+  background-color: #f2dede !important;
+  border-color: #ebccd1;
+}
+
+.parsley-required, .parsley-type, .parsley-minlength {
+  color: #a94442;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
 /* Small */
 @mixin sm {
   @media (min-width: 34em) {
@@ -117,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   background: $white;
 }
 
+
 /* FOOTER */
 .footer_spacer {
   position: relative;
@@ -193,30 +216,6 @@ h1, h2, h3, h4, h5, h6 {
           display: inline-block;
           &:last-child {padding-right: 0;}
           &:first-child {padding-left: 0;}
-
-          a {
-            color: $white;
-            text-decoration: none;
-            position: relative;
-
-            &:before {
-              content: "";
-              position: absolute;
-              background: $tertiary-color;
-              width: 100%;
-              transform: scaleX(1);
-              left: 0;
-              bottom: -4px;
-              height: 2px;
-              transition: all 0.2s ease-in;
-            }
-
-            &:hover {
-              &:before {transform: scaleX(0);}
-            }
-          }
-
-
         }
       }
 
@@ -230,16 +229,10 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-}
+}/* END FOOTER */
 
-#footer {
-  background: $primary-color;
-  color: $white;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-
-  ul {padding: 1rem 0 0 0;}
+.hyperlinks-inverse {
+  padding: 0;
 
   li {
     padding: 0 1rem;
@@ -247,27 +240,29 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     &:last-child {padding-right: 0;}
     &:first-child {padding-left: 0;}
-
-    a {
-      color: $white;
-      text-decoration: none;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        background: $tertiary-color;
-        width: 100%;
-        transform: scaleX(1);
-        left: 0;
-        bottom: -4px;
-        height: 2px;
-        transition: all 0.2s ease-in;
-      }
-
-      &:hover {
-        &:before {transform: scaleX(0);}
-      }
-    }
   }
-} /* END FOOTER */
+
+  a {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    background: $tertiary-color;
+    width: 100%;
+    transform: scaleX(1);
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    transition: all 0.2s ease-in;
+  }
+
+  a:hover {
+    color: $white;
+    text-decoration: none;
+    &:before {transform: scaleX(0);}
+  }
+}

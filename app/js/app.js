@@ -5,3 +5,4 @@
 //= modules/carousel.js
 //= modules/date.js
 //= modules/btn.js
+//= modules/validation.js

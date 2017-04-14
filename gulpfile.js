@@ -29,7 +29,7 @@ var path = {
         img: 'app/img/*'
     },
     watch: {
-        html: 'app/**/*.html',
+        html: 'app/*.html',
         js: 'app/js/**/*.js',
         style: 'app/scss/*.scss'
     },
@@ -115,5 +115,9 @@ gulp.task('watch', function () {
     });
 });
 
+gulp.task('php', function() {
+    gulp.src('app/*.php')
+        .pipe(gulp.dest('dist/'));
+});
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'webserver', 'watch', 'php']);
