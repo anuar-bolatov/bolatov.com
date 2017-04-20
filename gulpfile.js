@@ -120,4 +120,9 @@ gulp.task('php', function() {
         .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('default', ['build', 'webserver', 'watch', 'php']);
+gulp.task('lightbox', function() {
+    gulp.src('app/scss/lightbox.min.css')
+        .pipe(gulp.dest('dist/css/'));
+});
+
+gulp.task('default', ['build', 'webserver', 'watch', 'php', 'lightbox']);

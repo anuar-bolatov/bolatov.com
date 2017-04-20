@@ -5,10 +5,10 @@ var difference = today.getTime() - est.getTime();
 difference = (difference / 31556900000);
 
 var elMsg = document.getElementById('myExperience');
-elMsg.textContent = Math.floor(difference) + ' years.';
+elMsg.textContent = Math.floor(difference) + ' years';
 
 var el = document.getElementById('copyright');
-el.innerHTML = '<p property="dc:rights">&copy;<span property="dc:dateCopyrighted"> 2013-' + year + '<span property="dc:publisher"> Anuar Bolatov</span></p>';
+el.innerHTML = '<p property="dc:rights">&copy;<span property="dc:dateCopyrighted"> 2013-' + year + '<span property="dc:publisher"> Anwar Bolatov</span></p>';
 
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
