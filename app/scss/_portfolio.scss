@@ -53,6 +53,12 @@
 		flex: 1 22%;
 	}
 
+	&:nth-child(2n+0) {
+		@media (min-width: 576px) and (max-width: 767px) {
+			margin-right: 0;
+		}
+	}
+
 	&:nth-child(3n+3) {
 		@media (min-width: 768px) and (max-width: 991px) {
 			margin-right: 0;
