@@ -11,6 +11,13 @@
   transition-delay: 0.5s;
 }
 
+.slide-top {
+  opacity: 0;
+  transition: all 500ms linear;
+  transform: translate(0px, -100px);
+  transition-delay: 0.5s;
+}
+
 .in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);
