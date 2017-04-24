@@ -28,7 +28,7 @@
         <div class="navbar-item">
           <a href="index.html">Home</a>
           <a href="portfolio.html">Portfolio</a>
-          <a href="contact.php">Contact me</a>
+          <a href="contact.html">Contact me</a>
         </div>
         
 
@@ -89,34 +89,34 @@
         </div>
       </section>
 
-      <section class="contact-form">
-        <form name="form" id="form" action="../contact-me.php" method="post" enctype="text/plain" data-parsley-validate="">
+      <section class="contact-form" data-parsley-validate="">
+        <form id="form">
             
           <legend class="col-form-legend">Get in touch</legend>
 
           <ol>
             <li>
               <label for="name" class="required">Tell me your name<span style="font-weight: 700; color: #2e71f2;"> *</span></label>
-              <input name="name" type="text" id="name" class="form-control" required="" placeholder="Your name" />
+              <input name="name" type="text" class="form-control" placeholder="Your name" required />
             </li>
             
             <li>
               <label for="email" class="required">What's your email address?<span style="font-weight: 700; color: #2e71f2;"> *</span></label>
-              <input name="email" type="email" id="email" class="form-control" required="" placeholder="you@example.com" data-parsley-trigger="change" />
+              <input name="email" type="email" class="form-control" data-parsley-trigger="change" placeholder="you@example.com" required />
             </li>
             
             <li>
               <label for="phone">Can I call you?</label>
-              <input name="phone" type="text" id="phone" class="form-control" placeholder="Your phone number" data-parsley-type="digits" />
+              <input name="phone" type="text" class="form-control" data-parsley-type="digits" placeholder="Your phone number" />
             </li>
           
             <li>
               <label for="message" class="required">What would you like to talk about?<span style="font-weight: 700; color: #2e71f2;"> *</span></label>
-              <textarea name="message" type="text" rows="4" id="message" class="form-control" required="" placeholder="Your message (20 chars min)" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-minlength-message="Come on! You need to enter at least 20 characters."></textarea>
+              <textarea name="message" type="text" rows="4" id="message" class="form-control" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-minlength-message="Come on! You need to enter at least 20 characters." placeholder="Your message (20 chars min)" required></textarea>
             </li>
           </ol>
-          <div class="form-button">
-            <input name="submit" type="submit" class="form-btn" value="Let's get talking">
+          <div class="text-center">
+            <button name="submit" type="submit" class="btn" value="Let's get talking">Let's get talking<span></span></button>
           </div>
 
         </form>
@@ -162,11 +162,41 @@
 
 <script>
 
+$(document).ready(function() {
+
+  $("#form").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      alert("Thank you for the submission! You should recieve a reply shortly.");
+      $("#form").trigger("reset");
+    });
+    return false;
+  });
+  
+});
+
 var today = new Date();
 var year = today.getFullYear();
 
 var el = document.getElementById('copyright');
 el.innerHTML = '<p property="dc:rights">&copy;<span property="dc:dateCopyrighted"> 2013-' + year + '<span property="dc:publisher"> Anwar Bolatov</span></p>';
+
+$('.btn')
+.on('mouseenter', function(e) {
+    var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+    $(this).find('span').css({top:relY, left:relX});
+}).on('mouseout', function(e) {
+    var parentOffset = $(this).offset(),
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+    $(this).find('span').css({top:relY, left:relX});
+});
 
 </script>
     
