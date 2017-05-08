@@ -224,7 +224,8 @@
 .portfolio-content {
 	padding: 1rem 0;
 	img {
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 		padding: 1rem 0;
 		@include md {padding: 2rem 0;}
 	}

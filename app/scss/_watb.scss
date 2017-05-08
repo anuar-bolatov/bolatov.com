@@ -1,0 +1,34 @@
+.watb-hero {
+	margin-top: 64px;
+	background-position: 50% 50%; 
+  	background-size: cover;
+
+	article {
+		padding: 4rem 0;
+	}
+}
+
+.watb-experience {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+	@include md {
+	    padding: 4rem 0;
+	  }
+}
+
+.video {
+	display: block;
+	margin: 0 auto;
+	background: url('../img/samsung_s6-mockup.png') no-repeat top left transparent;
+	background-size: 224px 448px;
+    width: 224px;
+    height: 448px;
+    position: relative;
+    padding-bottom: 2rem;
+    video {
+	    position: absolute;
+	    top: 34px;
+	    left: 12px;
+	}
+}
