@@ -17,7 +17,7 @@
       padding: 4.4rem 0 4rem 0;
     }
     @include lg {
-      width: 50%;
+      width: 45%;
     }
     h1 {color: $secondary-color;}
   }
@@ -235,6 +235,8 @@
 			width: 60%;
 		}
 	}
+
+	h2 {margin-bottom: 1.5rem;}
 }
 
 .portfolio-block-next {
@@ -303,4 +305,45 @@
 	display: block;
 	height: 560px;
   	pointer-events: none;
+}
+
+.portfolio-article {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+}
+
+.video {
+	display: block;
+	margin: 0 auto;
+	background: url('../img/samsung_s6-mockup.png') no-repeat top left transparent;
+	background-size: 224px 448px;
+    width: 224px;
+    height: 448px;
+    position: relative;
+    video {
+	    position: absolute;
+	    top: 34px;
+	    left: 12px;
+	}
+}
+
+.my_process {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 2.4rem 1rem 2rem 1rem;
+    @include md {
+      width: 80%;
+      padding: 4.4rem 0 4rem 0;
+  	}
+  	@include lg {
+      width: 60%;
+  	}
+  	h1 {color: $secondary-color;margin-bottom: 0;}
+}
+
+.portfolio-solution {
+	padding: 1rem;
 }
