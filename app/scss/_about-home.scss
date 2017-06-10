@@ -114,3 +114,29 @@
     }
   }
 }
+
+.awards {
+  background: $white url('../img/awards-small_bg.jpg');
+  background-position: 50% 50%; 
+  background-size: cover;
+  padding: 2rem 1rem;
+  @include md {padding: 4rem 1rem;}
+  .awards-text {
+    color: $white;
+    .awards-column {
+      column-count: 1;
+      @include md {column-count: 2;}
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 34em) {
+  .awards { 
+      background: $white url('../img/awards-bg.jpg');
+      background-position: 50% 50%; 
+      background-size: cover;
+  }
+}

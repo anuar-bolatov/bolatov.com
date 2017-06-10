@@ -329,6 +329,16 @@
 	}
 }
 
+.process {
+	background: $white url('../img/contact-small_bg.jpg');
+}
+
+@media only screen and (min-device-width: 34em) {
+  .process { 
+      background: $white url('../img/contact-bg.jpg');
+  }
+}
+
 .my_process {
 	width: 100%;
 	text-align: center;

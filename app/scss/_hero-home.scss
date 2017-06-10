@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: $white url('../img/hero-bg.jpg');
+  background: $white url('../img/hero-small_bg.jpg');
   background-position: 50% 50%; 
   background-size: cover;
   height: 100vh;
@@ -35,4 +35,14 @@
       padding: 4rem;
     }
   }
-}/* END HERO */
+}
+
+@media only screen and (min-device-width: 34em) {
+  .hero { 
+      background: $white url('../img/hero-bg.jpg');
+      background-position: 50% 50%; 
+      background-size: cover;
+  }
+}
+
+/* END HERO */
