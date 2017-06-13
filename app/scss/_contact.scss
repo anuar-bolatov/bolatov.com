@@ -1,5 +1,4 @@
 .contact_page {
-  background: #cdcdcd url('../img/contact-small_bg.jpg');
   margin-top: 64px;
   &:before {
     display: block;
@@ -8,12 +7,6 @@
     width: 100%;
     background-color: $white;
     margin-top: -64px;
-  }
-}
-
-@media only screen and (min-device-width: 34em) {
-  .contact_page { 
-      background: $white url('../img/contact-bg.jpg');
   }
 }
 

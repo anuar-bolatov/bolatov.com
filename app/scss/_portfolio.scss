@@ -97,7 +97,6 @@
 }
 
 #illustrations {
-	background: #cdcdcd url('../img/contact-bg.jpg');
 	padding: 0 1rem;
 }
 
@@ -330,13 +329,11 @@
 }
 
 .process {
-	background: $white url('../img/contact-small_bg.jpg');
-}
-
-@media only screen and (min-device-width: 34em) {
-  .process { 
-      background: $white url('../img/contact-bg.jpg');
-  }
+	background: radial-gradient(#aaaaaa 0, #aaaaaa 12%, rgba(0,0,0,0) 12%, rgba(0,0,0,0) 100%), #dcdcdc;
+	background-origin: padding-box;
+	background-clip: border-box;
+	background-size: 14px 14px;
+	border: none;
 }
 
 .my_process {
