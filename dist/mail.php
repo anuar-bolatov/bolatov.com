@@ -1,6 +1,6 @@
 <?php
 
-$recepient = "anwar@bolatov.com";
+$recepient = "anuar@bolatov.com";
 $sitename = "bolatov.com";
 
 $name = trim($_POST["name"]);

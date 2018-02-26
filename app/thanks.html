@@ -13,7 +13,7 @@
     <meta name="copyright" content="&copy; 2013-2017 Anuar Bolatov">
     <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <title>Anuar Bolatov | About Me</title>
+    <title>Anuar Bolatov | Thank you</title>
 
     <link href="css/app.css" rel="stylesheet">
 
@@ -79,69 +79,21 @@
   
 </header>
 
-<main class="about main">
-  
-        <section class="about_page">
-          
-            <article class="about-text">
-                <img src="img/profile-pic.jpg" style="max-width: 140px;" alt="Anuar Bolatov profile picture"></img>
-                <h1>About Anuar</h1>
-                <p>I'm a Product Designer with over <span id="myExperience"></span> of experience in the industry. For me, design is about making life easier and inspiring action. A customer-centred mindset and sensitivity for visual design enable me to turn your business goals into the result whilst solving problems of the customers.</p>
-                
-                <a class="btn" href="contact.html">Contact me<span></span></a>
-                
-            </article>
-            
-            <div class="about-img">
-              
-            </div>
-
-        </section>
-
+<main class="contact_page-content thank-you main">
+  <div class="container">
+    <div class="row text-center">
+      <section class="col-sm-12">
+        <h1>Thank you!</h1>
+        <h3 class="font-normal">Your information was submitted successfully.</h3>
+        <a class="btn" href="../contact.html">Home page<span></span></a>
+      </section>
+    </div>
+  </div>
 </main>
 
-<div class="footer_spacer"></div>
+<script src="js/app.js"></script>
 
-<footer class="footer">
-
-    <a href="contact.html" class="footer_link"></a>
-
-    <div class="footer_content">
-        <img src="img/footer-pic.svg" alt="Portrait doodle of Anuar Bolatov"></img>
-        <!--<h2>Currently I work at AO.com as a UX designer</h2>-->
-        <h2>Currently I work at AO.com as a UX designer</h2>
-        <!--<h3 id="todaysDate"></h3>-->
-        <a class="btn" href="contact.html">Contact me<span></span></a>
-    </div>
-
-    <div class="footer_secondary">        
-      <div class="container footer_secondary-content">
-
-        <div id="copyright"></div>
-
-        <div class="footer_secondary-social">
-          <ul class="hyperlinks-inverse">
-            <li><a href="https://www.facebook.com/anuar.bolatov" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/anuar_bolatov/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/anuar-bolatov-b1ba6241" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-</footer>
-
-<script type="text/javascript">
-var today = new Date();
-var year = today.getFullYear();
-var est = new Date('Sep 8, 2011 12:43:59');
-var difference = today.getTime() - est.getTime();
-difference = (difference / 31556900000);
-
-var elMsg = document.getElementById('myExperience');
-elMsg.textContent = Math.floor(difference) + ' years';
-
+<script>
 $('.btn')
 .on('mouseenter', function(e) {
     var parentOffset = $(this).offset(),
@@ -155,8 +107,6 @@ $('.btn')
     $(this).find('span').css({top:relY, left:relX});
 });
 </script>
-
-<script src="js/app.js"></script>s
 
 </body>
 </html>
