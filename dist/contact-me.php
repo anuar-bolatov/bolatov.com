@@ -10,6 +10,6 @@ $header .= "MIME-Version: 1.0\r\n";
 $message .= $body;
   
     $mail=mail('anuar@bolatov.com', 'New Form submission', $message, $header);
-    if($mail)header('location: thank-you.php');
+    if($mail)header('location: thanks.html');
   
 ?>
